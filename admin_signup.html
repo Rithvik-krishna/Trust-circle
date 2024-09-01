@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d5ded3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            background-color: #fffff0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #222;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="datetime-local"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #efecec;
+        }
+
+        button[type="submit"] {
+            background-color: #51c355;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Sign Up</h1>
+        <form id="admin-form">
+            <label for="incomer-name">Incomer's Name:</label>
+            <input type="text" id="incomer-name" name="incomer-name" required>
+
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" id="phone-number" name="phone-number" required>
+
+            <label for="purpose-of-visit">Purpose of Visit:</label>
+            <input type="text" id="purpose-of-visit" name="purpose-of-visit" required>
+
+            <label for="time-of-visit">Time of Visit:</label>
+            <input type="time" id="time-of-visit" name="time-of-visit" required>
+
+            <label for="date-of-visit">Date of Visit:</label>
+            <input type="datetime-local" id="date-of-visit" name="date-of-visit" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script src="admin_signup.js"></script>
+</body>
+</html>

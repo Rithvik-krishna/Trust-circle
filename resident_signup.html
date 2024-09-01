@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d5ded3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fffff0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #222;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #444;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #efecec;
+        }
+        button {
+            background-color: #51c355;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resident Sign Up</h1>
+        <form id="resident-form">
+            <label for="flat-number">Flat Number:</label>
+            <input type="text" id="flat-number" name="flat-number" required>
+
+            <label for="building-number">Building Number:</label>
+            <input type="text" id="building-number" name="building-number" required>
+
+            <label for="society-name">Society Name:</label>
+            <input type="text" id="society-name" name="society-name" required>
+
+            <label for="contact-number">Contact Number:</label>
+            <input type="text" id="contact-number" name="contact-number" required>
+
+            <label for="facilities">Avail Facilities:</label>
+            <select id="facilities" name="facilities">
+                <option value="">Select an option</option>
+                <option value="vendor-management">Vendor Management</option>
+                <option value="entry-management-data">Entry Management Data</option>
+                <option value="community-connect">Community Connect</option>
+            </select>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('resident-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form data
+                const flatNumber = document.getElementById('flat-number').value;
+                const buildingNumber = document.getElementById('building-number').value;
+                const societyName = document.getElementById('society-name').value;
+                const contactNumber = document.getElementById('contact-number').value;
+                const facilities = document.getElementById('facilities').value;
+
+                if (facilities === 'vendor-management') {
+                    window.location.href = 'vendor-management.html';
+                } else if (facilities === 'entry-management-data') {
+                    window.location.href = 'entry-management-data.html';
+                } else if (facilities === 'community-connect') {
+                    window.location.href = 'community-connect.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

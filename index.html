@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Securing and Empowering Communities</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .sos-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sos-icon:hover {
+            background-color: #cc0000;
+        }
+        .emergency-numbers {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .emergency-numbers ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .emergency-numbers li {
+            margin-bottom: 10px;
+        }
+        .emergency-numbers a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="trust-circle">
+            <img src="trust circle1.jpg" alt="Trust Circle Logo">
+        </div>
+        <div class="form-container">
+            <h1>Sign Up</h1>
+            <form id="signup-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <div class="role-selection">
+                    <label for="role">Sign up as:</label>
+                    <select id="role" name="role">
+                        <option value="resident">Resident</option>
+                        <option value="vendor">Vendor</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="sos-icon" onclick="showEmergencyNumbers()">SOS</div>
+    <div class="emergency-numbers" id="emergency-numbers">
+        <h4>Emergency Numbers</h4>
+        <ul>
+            <li><a href="tel:100">Police: 100</a></li>
+            <li><a href="tel:101">Fire: 101</a></li>
+            <li><a href="tel:102">Ambulance: 102</a></li>
+            <li><a href="tel:1091">Women's Helpline: 1091</a></li>
+            <li><a href="tel:1098">Child Helpline: 1098</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function showEmergencyNumbers() {
+            var emergencyNumbers = document.getElementById('emergency-numbers');
+            if (emergencyNumbers.style.display === 'block') {
+                emergencyNumbers.style.display = 'none';
+            } else {
+                emergencyNumbers.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
